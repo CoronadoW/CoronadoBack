@@ -4,6 +4,7 @@ package com.coronadoportfolio.coronado.security;
 import com.coronadoportfolio.coronado.security.Jwt.JwtEntryPoint;
 import com.coronadoportfolio.coronado.security.Jwt.JwtTokenFilter;
 import com.coronadoportfolio.coronado.security.Service.UserDetailImplem;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,9 +22,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class MainSecurity {
+public class MainSecurity{
     @Autowired
-    UserDetailImplem userDetailsService;
+    UserDetailImplem UserDetailServiceImplem;
     @Autowired
     JwtEntryPoint JwtEntryPoint;
     
@@ -36,7 +37,8 @@ public class MainSecurity {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-
+    
+    
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
             throws Exception {
@@ -48,7 +50,7 @@ public class MainSecurity {
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(JwtEntryPoint).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests() 
+                 .authorizeRequests()
                  .anyRequest().authenticated();
 
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
