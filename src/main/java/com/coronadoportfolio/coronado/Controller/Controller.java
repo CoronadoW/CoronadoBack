@@ -61,9 +61,10 @@ public class Controller {
     @GetMapping("/Persona/ver/perfil")
     public Persona findPersona(){
         
-        return persoServ.findPersona((long)2);
+        return persoServ.findPersona((long)1);
     }
 }
 
 /*Como parte de la implementacion del back en el front, para evitar el error de cors ingreso la anotation @croosOrigin(origins = "http://localhost:4200")
-Estoy haciendo llamados desde esta url, aceptalas*/
+Estoy haciendo llamados desde esta url, aceptalas 
+un comentario mas para ver el git*/
