@@ -65,3 +65,5 @@ public class Controller {
     }
 }
 
+/*Como parte de la implementacion del back en el front, para evitar el error de cors ingreso la anotation @croosOrigin(origins = "http://localhost:4200")
+Estoy haciendo llamados desde esta url, aceptalas*/
