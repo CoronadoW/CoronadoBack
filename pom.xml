@@ -81,7 +81,14 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
+                <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <mainClass>CoronadoApplication</mainClass> <!-- Reemplaza com.example.MainClass con tu clase principal -->
+            </configuration>
+ <!--  Version antes de hacer el debug debido a no poder hacer el deploy en Render
+                         <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <excludes>
@@ -91,6 +98,7 @@
                         </exclude>
                     </excludes>
                 </configuration>
+-->                                                
             </plugin>
         </plugins>
     </build>
