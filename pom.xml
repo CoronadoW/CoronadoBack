@@ -78,7 +78,7 @@
     
     
     
-   <!--  Build an executable JAR debug dio error al hacer clean and build-->
+   <!--  Build an executable JAR debug ok y clean and build succes-->
    <build>  
     <plugins>  
         <plugin>  
@@ -97,27 +97,37 @@
     </plugins>  
 </build> 
 
-    <!--
-    <build>
-        <plugins>
-            <plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <version>3.0.5</version>
-    <configuration>
-        <mainClass>com.coronadoportfolio.coronado.CoronadoApplication</mainClass>
-    </configuration>
-    <executions>
-        <execution>
-            <goals>
-                <goal>repackage</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-        </plugins>
-        </build>
-       -->
+    
+   
+        
+<!-- dio error al hacer el debug   
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            
+            <version>3.0.5</version>
+            <configuration>
+                
+                <mainClass>com.coronadoportfolio.coronado.CoronadoApplication</mainClass>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+ --> 
+
+        
+        
+       
     
     
  <!-- ultimo commit 04/03  
