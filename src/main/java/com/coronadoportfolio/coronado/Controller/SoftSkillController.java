@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("softSkill")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://coronadologin.web.app")
 public class SoftSkillController {
     
     @Autowired
