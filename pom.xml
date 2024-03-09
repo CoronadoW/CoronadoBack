@@ -76,13 +76,26 @@
         </dependency>     
     </dependencies>
     
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>CoronadoApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+            
     
     
-   <!--  Build an executable JAR debug ok y clean and build succes-->
+    
+   <!--  Build an executable JAR debug ok y clean and build succes, error en el deploy de render
    <build>  
     <plugins>  
-        <plugin>  
-              
+        <plugin>              
             <groupId>org.apache.maven.plugins</groupId>  
             <artifactId>maven-jar-plugin</artifactId>  
             <version>3.3.0</version>  
@@ -96,10 +109,8 @@
         </plugin>  
     </plugins>  
 </build> 
+-->
 
-    
-   
-        
 <!-- dio error al hacer el debug   
 <build>
     <plugins>
@@ -123,14 +134,9 @@
         </plugin>
     </plugins>
 </build>
- --> 
-
+ -->    
         
-        
-       
-    
-    
- <!-- ultimo commit 04/03  
+<!-- ultimo commit 04/03  
   <build>
         <plugins>       
             <plugin>
