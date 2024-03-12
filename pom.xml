@@ -76,6 +76,7 @@
         </dependency>     
     </dependencies>
     
+    <!--Pom igual al commit que funciona pero con las urls cambiadas, no funciona en render con las urls cambiadas.
     <build>
         <plugins>
             <plugin>
@@ -88,11 +89,11 @@
             </plugin>
         </plugins>
     </build>
-            
+     -->       
     
     
     
-   <!--  Build an executable JAR debug ok y clean and build succes, error en el deploy de render
+   <!--  Build an executable JAR debug ok y clean and build succes, error en el deploy de render-->
    <build>  
     <plugins>  
         <plugin>              
@@ -109,7 +110,7 @@
         </plugin>  
     </plugins>  
 </build> 
--->
+
 
 <!-- dio error al hacer el debug   
 <build>
