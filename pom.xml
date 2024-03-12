@@ -76,6 +76,30 @@
         </dependency>     
     </dependencies>
     
+    <!--Da error al hacer el debug y error al clean and build-->
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>3.2.3</version>
+            <configuration>
+                <mainClass>com.coronadoportfolio.coronado.CoronadoApplication</mainClass>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+
+</project>
+    
+    
     <!--Pom igual al commit que funciona pero con las urls cambiadas, no funciona en render con las urls cambiadas.
     <build>
         <plugins>
@@ -93,7 +117,7 @@
     
     
     
-   <!--  Build an executable JAR debug ok y clean and build succes, error en el deploy de render-->
+   <!--  Build an executable JAR debug ok y clean and build succes, error en el deploy de render
    <build>  
     <plugins>  
         <plugin>              
@@ -110,32 +134,11 @@
         </plugin>  
     </plugins>  
 </build> 
+-->
 
 
-<!-- dio error al hacer el debug   
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            
-            <version>3.0.5</version>
-            <configuration>
-                
-                <mainClass>com.coronadoportfolio.coronado.CoronadoApplication</mainClass>
-            </configuration>
-            <executions>
-                <execution>
-                    <goals>
-                        
-                        <goal>repackage</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
- -->    
+
+  
         
 <!-- ultimo commit 04/03  
   <build>
@@ -173,5 +176,5 @@
     -->    
 
 
-</project>
+
 
